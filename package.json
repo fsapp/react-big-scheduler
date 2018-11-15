@@ -20,10 +20,10 @@
   "author": "Stephen Chou <27788280@qq.com> (https://github.com/StephenChou1017)",
   "repository": {
     "type": "git",
-    "url": "git@github.com:StephenChou1017/react-big-scheduler.git"
+    "url": "git@github.com/fsapp/react-big-scheduler.git"
   },
   "bugs": {
-    "url": "http://github.com/StephenChou1017/react-big-scheduler/issues"
+    "url": "http://github.com/fsapp/react-big-scheduler/issues"
   },
   "license": "MIT",
   "config": {},
