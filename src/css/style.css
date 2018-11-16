@@ -216,5 +216,29 @@ table.resource-table tr td:last-child, /*table.scheduler-bg-table tr td:last-chi
     position: absolute;
 }
 
+.fs-tilt-event{
+    -webkit-transform: skewX(-30deg);
+    -moz-transform: skewX(-30deg);
+    -o-transform: skewX(-30deg);
+    z-index: 10;
+    opacity: 0.8;
+}
 
 
+.fc-bg {
+    z-index: 10000;
+    background: #fff;
+    opacity: .25;
+}
+
+.fc-title {
+    text-align: left;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    padding-left: 30px !important;
+    background-size: 16px !important;
+    background-position: 10px center;
+    margin-left: -8px;
+}

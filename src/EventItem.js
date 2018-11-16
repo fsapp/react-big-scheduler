@@ -322,7 +322,12 @@ class EventItem extends Component {
         const {eventItem, isStart, isEnd, isInPopover, eventItemClick, schedulerData, isDragging, connectDragSource, connectDragPreview, eventItemTemplateResolver} = this.props;
         const {config, localeMoment} = schedulerData;
         const {left, width, top} = this.state;
-        let roundCls = isStart ? (isEnd ? 'round-all' : 'round-head') : (isEnd ? 'round-tail' : 'round-none');
+        let roundCls = 'round-none';
+
+        if (eventItem.status != 'Available') {
+            roundCls = 'fs-tilt-event';
+        }
+
         let bgColor = config.defaultEventBgColor;
         if (!!eventItem.bgColor)
             bgColor = eventItem.bgColor;
@@ -346,11 +351,11 @@ class EventItem extends Component {
         let endResizeDiv = <div />;
         if (this.endResizable(this.props))
             endResizeDiv = <div className="event-resizer event-end-resizer" ref={(ref) => this.endResizer = ref}></div>;
-
         let eventItemTemplate = (
             <div className={roundCls + ' event-item'} key={eventItem.id}
-                 style={{height: config.eventItemHeight, backgroundColor: bgColor}}>
-                <span style={{marginLeft: '10px', lineHeight: `${config.eventItemHeight}px` }}>{eventTitle}</span>
+                 style={{height: config.eventItemHeight, backgroundColor: eventItem.backgroundColor}}>
+                <span  className={'fc-title'} style={{marginLeft: '10px', lineHeight: `${config.eventItemHeight}px`, color: eventItem.textColor }}>{eventTitle}</span>
+                <div className={'fc-bg'}></div>
             </div>
         );
         if(eventItemTemplateResolver != undefined)

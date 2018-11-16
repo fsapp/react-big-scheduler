@@ -1,12 +1,12 @@
 {
-  "name": "react-big-scheduler",
+  "name": "multicalendar-reservations-view",
   "version": "0.2.3",
   "description": "A scheduler and resource planning component built for React and made for modern browsers (IE10+)",
   "keywords": [
     "scheduler",
     "react-component",
     "react",
-    "react-big-scheduler",
+    "multicalendar-reservations-view",
     "resource planning",
     "antd"
   ],

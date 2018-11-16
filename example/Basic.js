@@ -14,7 +14,36 @@ class Basic extends Component{
         super(props);
 
         //let schedulerData = new SchedulerData(new moment("2017-12-18").format(DATE_FORMAT), ViewTypes.Week);
-        let schedulerData = new SchedulerData('2017-12-18', ViewTypes.Week);
+        // let schedulerData = new SchedulerData('2017-12-18', ViewTypes.Week);
+
+
+        let schedulerData = new SchedulerData('2017-12-18', ViewTypes.Week, false, false, {
+            calendarPopoverEnabled: false,
+            startResizable: false,
+            endResizable: false,
+            movable: false,
+            creatable: false,
+            checkConflict: false,
+            showAgenda: false,
+            eventItemPopoverEnabled: true,
+            scrollToTodayEnabled: false,
+            headerEnabled: false,
+            dayResourceTableWidth: 0,
+            schedulerWidth: 0,
+            schedulerMaxHeight: 0,
+            dayStartFrom: 0,
+            nonWorkingTimeHeadBgColor: 0,
+            nonWorkingTimeBodyBgColor: 0,
+            crossResourceMove: false,
+            scrollToSpecialMomentEnabled:false,
+            recurringEventsEnabled: false,
+            relativeMove: false,
+            views: [
+                {viewName: 'Two days', viewType: 5, showAgenda: false, isEventPerspective: false},
+                {viewName: 'Two weeks', viewType: 6, showAgenda: false, isEventPerspective: false},
+                {viewName: 'Two months', viewType: 7, showAgenda: false, isEventPerspective: false},
+            ],
+        });
         schedulerData.localeMoment.locale('en');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
