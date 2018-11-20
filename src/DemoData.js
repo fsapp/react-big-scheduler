@@ -39,7 +39,7 @@ const DemoData = {
             'backgroundColor': '#26C281',
             'url': '/reservations/view/66497',
             'status': 'Booked',
-            'src': null,
+            'src': 'http://fa.ppetrov.fsapp.netreact.com/assets/images/booking-sm.png',
             'guest': 'Jen O\'Neill',
             'nights': '5',
             'guests': '2',
@@ -50,7 +50,8 @@ const DemoData = {
             'email': 'jen-o7tn1rkodfbrkl81@guest.airbnb.com',
             'logo': 'airbnb',
             'movable': false,
-            'readOnly': true
+            'readOnly': true,
+
         },
         {
             "id": "2023701",
